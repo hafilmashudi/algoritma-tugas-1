@@ -1,1 +1,1 @@
-# algoritma-1
+# algoritma-tugas-1
