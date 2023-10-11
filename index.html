@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="angka1"><br>
+    <input type="text" id="angka2"><br><br>
+    <input type="button" value="+" onclick="penjumlahan()">
+    <input type="button" value="-" onclick="pengurangan()">
+    <input type="button" value="/" onclick="pembagian()">
+    <input type="button" value="x" onclick="perkalian()">
+    <br><br>
+    <input type="text" id="hasil">
+    <br><br>
+    <h3>Hasil</h3>
+    <input type="text" id="grade">
+
+    <script>
+
+        console.log("ini tulisan muncul pertama kali saat page di eksekusi");
+        var kelamin = "pria";
+
+        if (kelamin == "pria") {
+            console.log("sunat");
+        }
+        else if (kelamin == "wanita") {
+            console.log("hamil")
+        }
+        else {
+            console.log("direhab saja")
+        }
+
+        var angka = 4;
+
+
+
+
+        function penjumlahan() {
+            var angka1 = parseInt(document.getElementById('angka1').value)
+            var angka2 = parseInt(document.getElementById('angka2').value)
+            var hasil = angka1 + angka2;
+            hitunggrade(hasil);
+            document.getElementById('hasil').value = hasil;
+        }
+
+        function pengurangan() {
+            var angka1 = parseInt(document.getElementById('angka1').value)
+            var angka2 = parseInt(document.getElementById('angka2').value)
+            var hasil = angka1 - angka2;
+
+            document.getElementById('hasil').value = hasil;
+        }
+
+        function pembagian() {
+            var angka1 = parseInt(document.getElementById('angka1').value)
+            var angka2 = parseInt(document.getElementById('angka2').value)
+            var hasil = angka1 / angka2;
+
+            document.getElementById('hasil').value = hasil;
+        }
+        function perkalian() {
+            var angka1 = parseInt(document.getElementById('angka1').value)
+            var angka2 = parseInt(document.getElementById('angka2').value)
+            var hasil = angka1 * angka2;
+
+            document.getElementById('hasil').value = hasil;
+        }
+
+        function hitunggrade(angka) {
+            //kondisi
+            if ((angka >= 85) && (angka <= 100)) {
+                document.getElementById('grade').value = "A"
+            }
+            else if (angka > 100) {
+                document.getElementById('grade').value = "nilai salah input"
+            }
+            else {
+                document.getElementById('grade').value = "anda tidak lulus"
+            }
+            
+            if ((angka >= 80) && (angka <= 84)){
+                document.getElementById('grade').value = "B+"
+            }
+
+            if ((angka >= 70) && (angka <= 79)){
+                document.getElementById('grade').value = "B"
+            }
+
+            if((angka >= 65) && (angka <= 69)){
+                document.getElementById('grade').value = "C+"
+            }
+
+            if((angka >= 55) && (angka <= 64)){
+                document.getElementById('grade').value = "C"
+            }
+
+            if((angka >= 45) && (angka <= 54)){
+                document.getElementById('grade').value = "D"
+            }
+            
+            if((angka >= 0) && (angka <= 44)){
+                document.getElementById('grade').value = "E"
+            }
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
